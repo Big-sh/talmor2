@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>탈모르파티</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/css/nomalize.css" media="all">
+	<style type="text/css">
+
+		#warp1 {width: 1280px; position: relative;}
+
+		#main {width: 1280px; position: absolute; left: 231px;}
+
+		#main img {width: 100%;}
+
+		#warp2 {position: relative;}
+
+		#warp3 {position: relative; opacity: 0;}
+
+		#warp4 {position: relative; opacity: 0;}
+
+		#warp5 {position: relative; opacity: 0;}
+
+		#warp6 {position: relative; opacity: 0;}
+
+		#videobox {width: 1280px; margin: auto; position: absolute; margin-left:231px; top: 120px;}
+
+		
+		#top {height: 120px; margin-left: 0px; position : absolute; top : 0px; margin-left: -848px;
+			  animation: warigaria 10s infinite alternate;}
+		
+		#bottom {height: 120px; position : absolute; top : 840px; margin-left: 0px;
+				 animation: warigarib 10s infinite alternate;}
+
+		#left {width: 200px; position : absolute; margin-left: 0px; }
+
+		#right {width: 200px; position : absolute; margin-left: 0px;}
+
+		@keyframes warigaria{
+			from{margin-left: -840px;}
+			to{margin-left: 0px;}
+		}
+
+		@keyframes warigarib{
+			from{margin-left : 0px; }
+			to{margin-left: -840px; }
+		}
+
+	</style>
+
+</head>
+<body>
+	
+	<div id = "warp1" >
+		<div id="main">
+			<img src="123.png">
+		</div>
+	</div>
+
+	<div id = "warp2" >
+		<div id="videobox">
+			<video id="vsource" src=".talmor.mp4" type="video/mp4">
+		  	</video>
+		</div>
+	</div>
+
+	<div id = "warp3">
+		<div id = "top">
+			<img src="bottom.jpg">
+		</div>
+	</div>
+
+	<div id = "warp4">
+		<div id = "bottom">
+			<img src="bottom.jpg">
+		</div>
+	</div>
+
+	<div id = "warp5">
+		<div id = "left">
+			<img src="jwa.jpg">
+		</div>
+	</div>
+
+	<div id = "warp6">
+		<div id = "right" >
+			<img src="wu.jpg">
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		var toggle = "off"
+
+		main.onmouseover = function(){
+            main.style.cursor = "pointer";
+        }
+
+		main.onclick = function(){
+		if(toggle == "off"){
+			toggle = "on"
+			videobox.style.width = "1280px";
+			vsource.style.width = "1280px";
+			vsource.setAttribute("src","./talmor.mp4");
+			vsource.play();
+			warp3.style.opacity = 1;
+			warp4.style.opacity = 1;
+
+		}else if(toggle == "on"){
+			toggle = "off"
+			videobox.style.width = "0px";
+			vsource.style.width = "0px";
+			vsource.setAttribute("src","./talmor.mp4");
+			vsource.pause();
+		}
+	}
+	</script>
+
+</body>
+</html>
